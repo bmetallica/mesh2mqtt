@@ -11,10 +11,16 @@ Benötigt wird:
 - meshtastic node mit IP im eigenen Netzwerk (via http erreichbar)
 
 # Installation/Anpassungen
-1. Die start.sh herunterladen
+1. Die start.sh herunterladen (nach /opt/mesh2mqtt/)
 2. In der start.sh müssen die IP des meshtastic Node und des Mqtt-Servers angepasst werden.
 3. die start.sh ausführbar machen "chmod +x start.sh"
 4. die start.sh ausführen ./start.sh
+
+# Als Dienst einrichten (Autostart)
+1. Die Datei "mesh2mqtt.service" und nach "/etc/systemd/system/" verschieben
+2. systemctl daemon-reload
+3. systemctl enable mesh2mqtt.service
+4. systemctl start mesh2mqtt.service
 
 # Weiterverarbeitung mit Node-Red
 **1.Node mqtt-in:**  
