@@ -1,0 +1,14 @@
+[Unit]
+Description=Meshtastic to MQTT Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /opt/mesh2mqtt/start.sh
+StandardOutput=null
+StandardError=null
+Restart=always
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
